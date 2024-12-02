@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="4cd460e2c71c2ffba346f4471ea0fa00" category="doc">빌더 워크로드 초기 릴리즈</block>
+  <block id="01885fa7b72aa9d947d8efa49fb4b8cd" category="paragraph">Builders용 BlueXP  워크로드 팩토리에서는 소프트웨어 버전 사용 및 액세스를 간소화하여 사용자 지정 툴이나 스크립트가 필요하지 않습니다. 소프트웨어 버전을 Perforce Helix Core와 통합된 즉각적인 클론으로 사용하여 개발 프로세스를 위한 편리한 작업 공간으로서 시간과 리소스를 절약할 수 있습니다.</block>
+  <block id="5f9f7bdd8b86c6cc583afabbd903007c" category="paragraph">초기 릴리스에는 프로젝트 및 작업 영역을 관리하고 Codebox를 사용하여 작업을 자동화하는 기능이 포함되어 있습니다. 또한 Builders를 Perforce Helix Core와 통합하여 각 프로젝트의 다양한 버전을 관리하고 프로젝트 간에 신속하게 전환할 수 있습니다.</block>
+  <block id="08c1bf6e31ef174ff608b5eb3d282063" category="summary">Codebox를 사용하여 호스트 배포, 데이터베이스 생성 등을 자동화할 수 있습니다.</block>
+  <block id="2ea6aca63123969c1931cd33bf4619a0" category="doc">Codebox로 자동화</block>
+  <block id="8f21210d3f74acd90334ba76bc90791c" category="paragraph">Codebox를 사용하여 프로젝트 생성 및 데이터 보호 작업을 자동화할 수 있습니다. Codebox는 코드형 인프라(IAC) 코파일럿(Co-pilot)으로, 워크로드 공장에서 지원하는 모든 작업을 실행하는 코드를 생성할 수 있도록 지원합니다.</block>
+  <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">코드박스 자동화</block>
+  <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">및 사용 방법에 대해 자세히 <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> 알아보십시오.</block>
+  <block id="d320e674d0ba312d297842a73dcb793d" category="summary">구축자를 위한 BlueXP  워크로드 팩토리에서의 작업 공간은 프로젝트 스냅샷을 기반으로 하는 프로젝트의 Perforce 표현입니다. 작업 영역은 작성기 프로젝트의 일부로 만들 수 있습니다.</block>
+  <block id="5638176be5dd4e400efc77338868cf55" category="doc">작업 영역을 만듭니다</block>
+  <block id="bed4b07913cf7b77e0bbaa749c305b16" category="paragraph">Builders용 BlueXP  워크로드 팩토리에서의 작업 공간은 특정 시점의 프로젝트에 대한 Perforce 표현입니다. 작업 영역은 프로젝트 스냅숏을 기반으로 만듭니다. 빌더 프로젝트 내에서 새 작업 영역을 만들 수 있습니다. Perforce UI에서 작업 영역을 만들 수 있습니다.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">시작하기 전에</block>
+  <block id="99deb87866ad46d767c9f099cdd1bc32" category="inline-link-macro">구축자를 Perforce와 통합합니다</block>
+  <block id="6ada1658939e3e0c0066d917e1966e5b" category="paragraph">Perforce Helix Visual Client와 빌더를 통합했는지 확인합니다. 자세한 내용은 을 <block ref="1d27073a25bfd58e633b69f8b5d54945" category="inline-link-macro-rx"></block> 참조하십시오.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
+  <block id="da8298c164d94d09143ffe89648c5d3c" category="list-text">Perforce에 로그인합니다.</block>
+  <block id="0d8bfed2e411f7c8b7dff958995d4b8d" category="list-text">Perforce 메뉴에서 * View * &gt; * WF * 를 선택합니다.</block>
+  <block id="cef1af30f6b4f7b7b4fb4dfaebdfd4ed" category="paragraph">Perforce UI에 워크로드 팩토리 로그인 화면이 나타납니다.</block>
+  <block id="dcafe9cce796ce855e87b270f0a5af59" category="inline-link-macro">콘솔 환경</block>
+  <block id="eb788a90862825cc147ed3f85612a8cc" category="list-text">중 하나를 사용하여 워크로드 팩토리에 <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>로그인합니다.</block>
+  <block id="e779f93b54eb654988c0421af9a49154" category="list-text">Create workspace * 를 선택합니다.</block>
+  <block id="7e8ef7f44044b6d0f74789559287feea" category="list-text">작업 영역 프로젝트 만들기 페이지에서 다음을 제공합니다.</block>
+  <block id="84e0437fbb34f7df37fde5cd3164b871" category="list-text">작업 공간의 기준으로 사용할 스냅샷을 선택합니다.</block>
+  <block id="823e06a14b6847643d4e237d4323c8c4" category="list-text">작업 영역의 이름을 입력합니다.</block>
+  <block id="23746643d2ed59cbb329d766d3165e53" category="list-text">필요한 경우 작업 영역을 요청할 사용자 식별자를 입력합니다. 이 식별자는 이 작업 영역을 사용할 개발자의 Perforce 사용자 ID와 일치해야 합니다.</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Create * 를 선택합니다.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">결과</block>
+  <block id="2d8f6486127f82c2bea30c11d743290d" category="paragraph">작업 영역이 만들어지고 작업 영역 페이지의 작업 영역 목록에 나타납니다.</block>
+  <block id="42342e81c625fd1c1141771fe2b6b202" category="summary">NetApp은 워크로드 팩토리 및 클라우드 서비스를 다양한 방식으로 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">도움을 받으십시오</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="paragraph">NetApp은 Workload Factory와 다양한 방법으로 클라우드 서비스를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
+  <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">FSx for ONTAP에 대한 지원을 받으십시오</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">FSx for ONTAP, 인프라 또는 서비스를 사용하는 솔루션과 관련된 기술 지원은 해당 제품의 워크로드 팩토리 설명서에서 "도움말 얻기"를 참조하십시오.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">ONTAP용 Amazon FSx</block>
+  <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
+  <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Workload Factory 및 해당 스토리지 솔루션 및 서비스에 대한 기술 지원을 받으려면 아래에 설명된 지원 옵션을 사용하십시오.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">자체 지원 옵션을 사용합니다</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">이 옵션은 하루 24시간, 주 7일 동안 무료로 사용할 수 있습니다.</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">문서화</block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">현재 보고 있는 Workload Factory 문서</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">기술 자료</block>
+  <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Workload Factory 기술 문서를 검색하여 문제 해결에 도움이 되는 문서를 찾습니다.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">커뮤니티</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Workload Factory 커뮤니티에 참여하여 진행 중인 토론을 따르거나 새로운 토론을 만드십시오.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">NetApp Support로 케이스 생성</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">위의 자체 지원 옵션 외에도 NetApp 지원 전문가와 협력하여 지원을 활성화한 이후의 모든 문제를 해결할 수 있습니다.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">시작하기 전에</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">지원 등록 방법을 알아보십시오</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">케이스 생성 * 기능을 사용하려면 먼저 지원을 등록해야 합니다. NetApp 지원 사이트 자격 증명을 워크로드 팩토리 로그인과 연결합니다. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>..</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Workload Factory 콘솔의 오른쪽 위에서 * Help &gt; Support * 를 선택합니다.</block>
+  <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">이 옵션을 선택하면 BlueXP 콘솔에 새 브라우저 탭이 열리고 지원 대시보드가 로드됩니다.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">리소스 * 페이지의 기술 지원 아래에서 사용 가능한 옵션 중 하나를 선택합니다.</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">전화로 통화하려면 * 전화 * 를 선택하십시오. 전화를 걸 수 있는 전화 번호가 나열된 netapp.com 페이지로 연결됩니다.</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">NetApp 지원 전문가와 함께 티켓을 열려면 * 케이스 생성 * 을 선택하십시오.</block>
+  <block id="d7d0da18fbb8f8f85c1364883fbdf4c7" category="list-text">* 서비스 *: * 워크로드 팩토리 * 를 선택합니다.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">* 케이스 우선 순위 *: 케이스의 우선 순위를 선택합니다. 우선 순위는 낮음, 중간, 높음 또는 긴급입니다.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">이러한 우선 순위에 대한 자세한 내용을 보려면 필드 이름 옆에 있는 정보 아이콘 위로 마우스를 가져갑니다.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">* 문제 설명 * : 해당 오류 메시지 또는 수행한 문제 해결 단계를 포함하여 문제에 대한 자세한 설명을 제공합니다.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">* 추가 이메일 주소 *: 다른 사람에게 이 문제를 알고자 할 경우 추가 이메일 주소를 입력하십시오.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">* 첨부 파일(선택 사항) *: 한 번에 하나씩 최대 5개의 첨부 파일을 업로드합니다.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">첨부 파일은 파일당 25MB로 제한됩니다. txt, log, pdf, jpg/jpeg, rtf, DOC/docx, xls/xlsx 및 CSV.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">NetApp Support로 케이스를 생성할 수 있는 케이스 생성 양식 스크린샷</block>
+  <block id="b0c6c3ee60a29925d3f09cd609b79483" category="paragraph"><block ref="b0c6c3ee60a29925d3f09cd609b79483" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">지원 케이스 번호와 함께 팝업이 나타납니다. NetApp 지원 전문가가 귀사의 사례를 검토하고 곧 다시 연결해 드릴 것입니다.</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">지원 케이스 기록을 보려면 * 설정 &gt; 일정 * 을 선택하고 "지원 케이스 생성"이라는 작업을 찾을 수 있습니다. 맨 오른쪽에 있는 버튼을 사용하면 작업을 확장하여 세부 정보를 볼 수 있습니다.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">케이스를 생성하려고 할 때 다음과 같은 오류 메시지가 나타날 수 있습니다.</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"선택한 서비스에 대해 케이스를 생성할 권한이 없습니다."</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">이 오류는 NSS 계정과 연결된 레코드 회사가 BlueXP 계정 일련 번호( 960xxxx) 또는 작동 환경 일련 번호 다음 옵션 중 하나를 사용하여 지원을 요청할 수 있습니다.</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">제품 내 채팅을 사용합니다</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">에서 비기술적 케이스를 제출하십시오<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">지원 사례 관리(Preview)</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">BlueXP에서 직접 활성 및 해결된 지원 사례를 보고 관리할 수 있습니다. NSS 계정 및 회사와 관련된 케이스를 관리할 수 있습니다.</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">케이스 관리를 미리 보기로 사용할 수 있습니다. NetApp은 이 경험을 개선하고 다음 릴리즈에서 향상된 기능을 추가할 계획입니다. 제품 내 채팅을 사용하여 피드백을 보내주십시오.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">다음 사항에 유의하십시오.</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">페이지 상단의 케이스 관리 대시보드에서는 두 가지 보기를 제공합니다.</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">왼쪽 보기에는 사용자가 제공한 NSS 계정으로 지난 3개월 동안 개설된 총 케이스가 표시됩니다.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">오른쪽 보기에는 사용자 NSS 계정을 기준으로 회사 수준에서 지난 3개월 동안 개설된 총 사례가 표시됩니다.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">테이블의 결과에는 선택한 보기와 관련된 사례가 반영됩니다.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">관심 있는 열을 추가 또는 제거할 수 있으며 우선 순위 및 상태 등의 열 내용을 필터링할 수 있습니다. 다른 열은 정렬 기능만 제공합니다.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">자세한 내용은 아래 단계를 참조하십시오.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">케이스 수준별로 케이스 메모를 업데이트하거나 아직 종결 또는 미결 종결 상태가 아닌 케이스를 종결할 수 있습니다.</block>
+  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">Case Management * 를 선택하고 메시지가 표시되면 NSS 계정을 BlueXP에 추가합니다.</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">케이스 관리 * 페이지에는 BlueXP 사용자 계정과 연결된 NSS 계정과 관련된 미해결 케이스가 표시됩니다. NSS 관리 * 페이지 상단에 나타나는 것과 동일한 NSS 계정입니다.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">필요한 경우 테이블에 표시되는 정보를 수정합니다.</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">조직의 케이스 * 에서 * 보기 * 를 선택하여 회사와 관련된 모든 케이스를 봅니다.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">정확한 날짜 범위를 선택하거나 다른 기간을 선택하여 날짜 범위를 수정합니다.</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">케이스 관리 페이지의 표 위에 있는 옵션 스크린샷으로 정확한 날짜 범위 또는 최근 7일, 30일 또는 3개월을 선택할 수 있습니다.</block>
+  <block id="4f7062c5c309a833cf46e4a1a5a5d366" category="paragraph"><block ref="4f7062c5c309a833cf46e4a1a5a5d366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">열의 내용을 필터링합니다.</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">활성 또는 종료와 같은 특정 상태와 일치하는 케이스를 필터링할 수 있는 상태 열의 필터 옵션 스크린샷</block>
+  <block id="8f624dee500d9670a27c4404084a7a62" category="paragraph"><block ref="8f624dee500d9670a27c4404084a7a62" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">테이블에 나타나는 더하기 아이콘입니다</block>
+  <block id="002f1c0a8cf4a68b888010ddef3a7f7e" category="list-text">표시할 열을 선택한 다음 선택하여 테이블에 표시되는 열을 변경합니다 <block ref="e55ec8dc42ae68d9326c51261c8a5f4f" category="inline-image-macro-rx" type="image"></block> .</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">표에 표시할 수 있는 열을 보여 주는 스크린샷</block>
+  <block id="72c5c65442a2c44e7f2546b8b4c957df" category="paragraph"><block ref="72c5c65442a2c44e7f2546b8b4c957df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">표의 마지막 열에 세 개의 점이 있는 아이콘</block>
+  <block id="000a1376035909240f559b8ab724030c" category="list-text">사용 가능한 옵션 중 하나를 선택하고 선택하여 기존 케이스를 <block ref="54181d1b918b28e5f92545f8b3b4a30c" category="inline-image-macro-rx" type="image"></block> 관리합니다.</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">* 사례 보기 *: 특정 케이스에 대한 전체 세부 정보를 봅니다.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">* 케이스 메모 업데이트 *: 문제에 대한 추가 세부 정보를 제공하거나 * 파일 업로드 * 를 선택하여 최대 5개의 파일을 첨부할 수 있습니다.</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">* 케이스 종료 *: 케이스를 종료하는 이유에 대한 세부 정보를 제공하고 * 케이스 닫기 * 를 선택합니다.</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">표의 마지막 열에서 메뉴를 선택한 후 수행할 수 있는 작업을 보여 주는 스크린샷</block>
+  <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="33a1ad2794fe25d296862b7540184587" category="summary">구축자를 Perforce와 통합하는 방법에 대해 알아보십시오.</block>
+  <block id="b180a58461c8ba30183fdbd2c6f94400" category="paragraph">개발자가 Perforce CLI를 사용하여 작업 영역을 관리할 수 있도록 빌더를 Perforce Helix Visual Client(P4V)와 통합합니다. 이를 통해 개발자는 프로젝트와 작업 영역 간에 빠르게 전환할 수 있으므로 개발 과정에서 시간을 절약할 수 있습니다.</block>
+  <block id="46a36d37c0e9a3ece7f56b7e840f1b27" category="inline-link">P4V 통합 파일</block>
+  <block id="7c359035b875bf519bc132bc94cafdab" category="list-text">를<block ref="093cf1344a1daf53cd0d14d747e3c73f" category="inline-link-rx"></block>다운로드하십시오.</block>
+  <block id="f5a1a9adabcc26ef07e31dc7417fb595" category="list-text">P4V를 열고 * Tools * &gt; * Manage Tools * &gt; * HTML Tabs * 로 이동합니다.</block>
+  <block id="78b6e5d76f833be63e70a3cd5925a698" category="list-text">HTML 탭 가져오기 * 를 선택합니다.</block>
+  <block id="e0ca1ffa7a7ff194727a7c27c1091abd" category="list-text">P4V 통합 XML 파일을 선택하고 * 가져오기 * 를 선택합니다.</block>
+  <block id="8021afdc93837bf89b4d2209922664f5" category="list-text">View * &gt; * Workload Factory * 로 이동합니다.</block>
+  <block id="ef61ce81e862e6ffc948f3f04f398a28" category="paragraph">빌더 웹 UI에 대한 BlueXP  워크로드 팩터리는 P4V 클라이언트 내에 HTML 탭으로 표시됩니다.</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">다음 단계</block>
+  <block id="bf9f27fc21322ff6302a870d86e2e722" category="inline-link-macro">마이그레이션 관리자를 사용하여 Amazon EC2 배포 계획을 생성합니다</block>
+  <block id="87ca10f516e69b36084d36d28809162e" category="paragraph"><block ref="a5520c5bc95caf26ab1a143ec38e8340" category="inline-link-macro-rx"></block>..</block>
+  <block id="1eba71d64e6c5e410e558530711e835b" category="summary">알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 플랫폼, 장치 또는 기능을 식별합니다. 이러한 제한 사항을 주의 깊게 검토하십시오.</block>
+  <block id="482723983a4f2af954e36ff41e567451" category="doc">알려진 제한 사항</block>
+  <block id="406b6743d6cb27b667d9600f28f51fe8" category="section-title">운영자 권한이 필요합니다</block>
+  <block id="0e82925f3b5c46a20fb9c532864e2c43" category="paragraph">구축자를 위한 BlueXP  워크로드 팩토리에는 오퍼레이터 권한이 올바르게 작동해야 합니다.</block>
+  <block id="fd940c262dc5e446ae0a0410b7142d79" category="summary">Builders용 BlueXP  워크로드 공장은 소프트웨어 구축자를 위한 신속한 구축 환경 생성 툴입니다.</block>
+  <block id="978a9377e8509d60456ddc9a632751bf" category="doc">구축자를 위한 BlueXP  워크로드 팩토리에 대해 알아보십시오</block>
+  <block id="48761a7a1c7cf21df76de124e4bf468a" category="paragraph">Builders용 BlueXP  워크로드 공장은 소프트웨어 구축자를 위한 신속한 구축 환경 생성 툴입니다. 개인 개발 환경을 빠르게 설정하여 시간을 절약하고 개발자를 위한 셀프 서비스를 지원하는 동시에 DevOps 팀에서 인프라에 대한 제어를 유지할 수 있도록 합니다. 소프트웨어 개발자는 Builders를 사용하여 전문 데이터 스토리지를 요구하거나 개발 인프라를 이해하지 않아도 작업 공간을 빠르게 만들 수 있습니다.</block>
+  <block id="a177bea5834b437a33419c326a612169" category="section-title">구축자를 위한 BlueXP  워크로드 팩토리는 무엇입니까?</block>
+  <block id="30d6cd98984294ee29a58d7bc3ecd9bb" category="paragraph">Builders용 BlueXP  워크로드 공장은 개발자가 여러 버전의 소프트웨어를 관리하고 상호 작용하는 방식을 간소화하도록 설계되었습니다. 빌더들은 Perforce Helix Core와 원활하게 통합되어 소프트웨어 버전의 즉각적인 복제본을 제공하고 개발, QA 및 CI/CD 프로세스를 위한 즉시 사용 가능한 작업 공간을 만듭니다.</block>
+  <block id="acf699fcbcfc00b42704c6549f7573ef" category="paragraph">Builders를 사용하면 손쉽게 프로젝트를 만들고 소프트웨어 환경과 아티팩트를 나타내는 볼륨을 할당할 수 있습니다. 소프트웨어를 업데이트하면 볼륨의 스냅샷을 생성하여 해당 시점에 소프트웨어 상태를 캡처할 수 있습니다. 즉, 버전 제어 시스템과 다시 동기화하지 않고도 모든 버전의 소프트웨어에 즉시 액세스할 수 있으므로 귀중한 시간과 리소스가 절약됩니다.</block>
+  <block id="69ced5671d5d5173c5ec8a09c78e6c22" category="paragraph">Builders는 ONTAP의 스냅샷 및 클론 기능을 활용하여 개발 워크플로우를 개선하고, 여러 버전의 소프트웨어에 빠르게 액세스하고, 개발 주기를 단축하고, 출시 기간을 단축합니다.</block>
+  <block id="70cb57a8d5d75d8762d6b082d319dec7" category="inline-link-macro">워크로드 공장 개요</block>
+  <block id="092d6885b847467d6999738db9651764" category="paragraph">작업 부하 공장에 대한 자세한 내용은 을 <block ref="f3c978a33f5f67b2b7f311b0ac6d0acd" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="f68c85d3ca9f728a18e779d0def20ddd" category="section-title">빌더 기능을 위한 BlueXP  워크로드 팩토리</block>
+  <block id="28bbd42671616b45b56f40b0f97cd071" category="paragraph">구축자를 위한 BlueXP  워크로드 공장은 다음과 같은 기능을 제공합니다.</block>
+  <block id="81271ea88c556e646a83ae8cb6874621" category="list-text">프로젝트를 만들고, 편집하고, 제거합니다</block>
+  <block id="235bfdfadd266ee4aaf8ed4ef7af3c9c" category="list-text">정의된 소프트웨어 버전의 스냅샷을 생성합니다</block>
+  <block id="2b1f12fc65d9945253b8cdbd567854de" category="list-text">작업 공간 생성 및 삭제(클론 기준)</block>
+  <block id="bee9403d4b2b1852994af86d7ac4a9e7" category="list-text">액세스 정책을 만들어 프로젝트에 대한 액세스를 제어합니다</block>
+  <block id="22837a5fe2297987c5ac780ef23bbfe1" category="list-text">각 프로젝트의 용량 사용량을 분석합니다</block>
+  <block id="a1ebf2a229965aee245dee3784a6d935" category="list-text">각 프로젝트의 클론 크기 제한 및 클론 보존을 제어합니다</block>
+  <block id="46ba10149e48f982955997b9c27c31a0" category="list-text">Perforce와 같은 버전 제어 시스템과 통합됩니다</block>
+  <block id="c11e3b8e48a7f97cb6cb2951dbceebea" category="section-title">빌더의 프로젝트 및 작업 영역</block>
+  <block id="95b4a45851bf07d5318bb2244d28fcc7" category="paragraph">빌더를 사용할 때 프로젝트를 생성하고 소프트웨어 환경과 아티팩트를 나타내는 볼륨을 할당합니다. 새 버전의 소프트웨어를 생성할 때마다 볼륨 데이터를 다시 동기화하고 프로젝트 스냅샷을 생성하여 볼륨 상태를 알려진 버전으로 표시해야 합니다. 프로젝트 소스 볼륨이 롤링 업데이트를 받고 여러 버전을 표시하기 위한 여러 스냅샷이 있을 수 있습니다. 각 스냅샷을 즉시 개발자, QA 또는 빌드 프로세스에 사용할 수 있는 편집 가능한 전용 저장소 또는 공유 리포지토리로 사용할 수 있습니다. 특정 소프트웨어 버전의 컨텍스트에서 클론은 작업 영역입니다.</block>
+  <block id="5e403a4c3b152d7f395a9974ccfd4e4c" category="section-title">워크로드 공장 내 운영 모드</block>
+  <block id="63aab450b65202ef9696852b9418f590" category="paragraph">세 가지 운영 모드(_basic_,_read_and_automate_)는 워크로드 공장 내부 및 외부에서 배포할 수 있는 유연한 옵션을 제공합니다. 워크로드 공장 외부에서 사용할 코드 조각으로 _BASIC_MODE에 대해 제로 트러스트 상태에서 즉각적인 가치를 얻을 수 있습니다. _READ_AND_AUTOMATE_MODE에서 증분 신뢰를 사용하여 증분 값을 얻습니다.</block>
+  <block id="eb6e457556694fbc8d187534ac1188e1" category="inline-link-macro">워크로드 공장 내 운영 모드</block>
+  <block id="7bb004aef4b112c40189995d006d040c" category="paragraph">에 대해 자세히 <block ref="eda3e48a35318d9f8306be63aaa1ab6b" category="inline-link-macro-rx"></block>알아보십시오.</block>
+  <block id="f63ee042c60cee6f631e4d8e0414dd00" category="section-title">워크로드 팩토리 코드 박스를 통한 자동화</block>
+  <block id="e8d2772773d0b560ee5057d9b413b85b" category="paragraph">워크로드 공장에서 _Codebox_의 내장된 자동화 기능을 도입했습니다. 코드박스는 다음과 같은 자동화 이점을 제공합니다.</block>
+  <block id="f1214f35af0ff103c79251078e169af6" category="list-text">* 코드 스니펫 생성 *: 리소스 생성 중에 IAC(Infrastructure-as-Code) 스니펫이 생성되므로 기존 오케스트레이션 워크플로우와의 원활한 통합이 가능합니다.</block>
+  <block id="dbebcf8b009c3066f6c2e41d9d151db3" category="list-text">* 코드형 인프라 공동 파일럿 *: 코드상자는 개발자와 DevOps가 워크로드 공장에서 지원하는 모든 작업을 실행할 수 있도록 코드를 생성하는 코드형 인프라(IAC) 공동 파일럿입니다.</block>
+  <block id="d8135e6fae6748dcba5e9d108c9af427" category="list-text">* 코드 뷰어 및 자동화 카탈로그 *: 코드박스는 자동화를 빠르게 분석할 수 있는 코드 뷰어와 빠른 향후 재사용을 위한 자동화 카탈로그를 제공합니다.</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">비용</block>
+  <block id="2089c6b820b86b20a7f7888582f8fdc1" category="paragraph">워크로드 공장의 빌더 기능을 사용하는 데 비용이 들지 않습니다.</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">라이센싱</block>
+  <block id="1da0e8d0baff6b19bb0cc4aed36be214" category="paragraph">NetApp는 워크로드 공장의 빌더 기능을 사용하기 위해 특별한 라이센스가 필요하지 않습니다.</block>
+  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">지원 지역</block>
+  <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">지원되는 아마존 지역을 봅니다.</block>
+  <block id="762e82c7fc7a9b2f0a9502b49f71b96b" category="paragraph">구축자는 FSx for ONTAP가 지원되는 모든 상업 지역에서 지원됩니다.<block ref="54b85ac4e794c565ea8c7aad421e6e67" category="inline-link-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">다음 AWS 지역은 지원되지 않습니다.</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">중국 지역</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">GovCloud(미국) 지역</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">비밀 클라우드</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">최고 비밀 클라우드</block>
+  <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">도움말 보기</block>
+  <block id="da444b283df699667b2316206972bdfe" category="paragraph">NetApp ONTAP용 Amazon FSx는 AWS 퍼스트 파티 솔루션입니다. 이 서비스를 사용하는 FSx for ONTAP 파일 시스템, 인프라 또는 솔루션과 관련하여 궁금한 사항이나 기술 지원 문제가 있는 경우 AWS 관리 콘솔의 지원 센터를 사용하여 AWS에 지원 케이스를 여십시오. “FSx for ONTAP” 서비스와 적절한 범주를 선택합니다. AWS 지원 케이스를 생성하는 데 필요한 나머지 정보를 제공합니다.</block>
+  <block id="49621bd29ae42da955d4a0c135d19e86" category="inline-link-macro">워크로드 공장을 위한 빌더에 대한 도움을 받으십시오</block>
+  <block id="65dd0f78a3b72996981e906ad877d452" category="paragraph">작업 부하 공장 또는 작업 부하 공장 애플리케이션 및 서비스에 대한 일반적인 질문은 을 참조하십시오<block ref="218312b2d9c914b9d139ff8e26e1dc71" category="inline-link-macro-rx"></block>.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">상표</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, NetApp 로고, NetApp 상표 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">특허</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp 소유 특허 목록은 다음 사이트에서 확인할 수 있습니다.</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  워크로드 공장</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="727a3a4d7dff6cc4c7c2079c82737b77" category="summary">데이터베이스 워크로드 공장에서 Microsoft SQL Server 인스턴스를 관리합니다.</block>
+  <block id="f1c3944d872285ff8f265eae2a58242a" category="doc">빌더 프로젝트 관리</block>
+  <block id="8ccab38a4433bff5ae8b91cb0d8cd0dd" category="paragraph">빌더 프로젝트를 관리하여 빌더용 BlueXP  워크로드 공장에서 각 프로젝트에 대한 코드 및 아티팩트가 관리되는 방법을 제어할 수 있습니다.</block>
+  <block id="be86ca474df5e14056bc0f20d2cdb767" category="section-title">프로젝트를 만듭니다</block>
+  <block id="18f61d0eac6bce18a43123d572f97f9c" category="paragraph">코드 및 아티팩트에 대해 Amazon FSx for NetApp ONTAP 파일 시스템의 데이터 보호 기능을 활용할 수 있도록 새로운 빌더 프로젝트를 생성할 수 있습니다.</block>
+  <block id="782161a6e01d95a8a5860f840ff2d8ff" category="list-text">Builders 타일에서 * Create project * 를 선택합니다.</block>
+  <block id="3b6aee0d7586fa2e996955209e86b05d" category="list-text">프로젝트 만들기 페이지에서 다음을 제공합니다.</block>
+  <block id="7ee7bbb308ec85b0e9fa63e91fe6f62f" category="list-text">* 프로젝트 이름 *: 프로젝트 이름을 입력합니다.</block>
+  <block id="0cca7644aa0cba3c4f8ebb05e857a455" category="list-text">* Description *: 프로젝트에 대한 설명을 입력합니다.</block>
+  <block id="ba325028343b8f10b90df796110a4920" category="list-text">* 파일 시스템 *: 다음을 제공합니다.</block>
+  <block id="784ff3f5246267e4ed3865e17c3945e7" category="list-text">* 자격 증명 *: 사용할 Amazon AWS 자격 증명을 선택합니다. 구축자는 이러한 자격 증명을 사용하여 이 프로젝트에 사용할 수 있는 FSx for ONTAP 파일 시스템을 검색하고 프로젝트의 클론 및 스냅샷을 생성합니다.</block>
+  <block id="8f4fb3217144e591177c8ab486235b32" category="list-text">* 지역 * : 이 FSx for ONTAP 파일 시스템이 상주하는 지역을 선택합니다.</block>
+  <block id="66386ee0d90d8185f4bf8daf0ad53e14" category="list-text">* FSx for ONTAP 파일 시스템 *: 이 프로젝트에 사용할 FSx for ONTAP 파일 시스템을 선택합니다.</block>
+  <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link">링크에 대해 자세히 알아보세요</block>
+  <block id="d81239812675b4359f2d53d5493ec461" category="paragraph">링크로 구성된 파일 시스템만 선택할 수 있습니다.<block ref="69ba18be3e95c1116b4fd108f5c6f03b" category="inline-link-rx"></block>..</block>
+  <block id="aac901acde2d9c0b975f3df90da3cc01" category="list-text">* 볼륨 선택 *: 프로젝트를 저장할 볼륨을 선택합니다. 빌더는 이 볼륨을 소프트웨어 저장소로 사용합니다.</block>
+  <block id="73699ce7a6810990bfdfcd9d66248475" category="paragraph">NFS 공유로 구성된 볼륨만 선택할 수 있습니다.</block>
+  <block id="54707d044b3f7dbd9190e90c0c26da4b" category="list-text">* 운영 정책 *: 프로젝트 클론에 대한 제한 제공:</block>
+  <block id="a809216c7c46f6741eb4e0a90cc4cd09" category="list-text">* 최대 보존 기간(일) *: 클론을 유지할 최대 일 수를 입력합니다. 이 수 일 후에 워크로드 공장 출하 시 클론이 제거됩니다.</block>
+  <block id="1b50a415b7236d521d4caff453dc9d8c" category="list-text">* 사용자 또는 그룹당 최대 클론 수 *: 사용자 또는 그룹에 대해 프로비저닝할 수 있는 최대 클론 수를 입력합니다.</block>
+  <block id="1aa5ccae7f0dcce26f22d0ad5c7ad270" category="list-text">* 최대 클론 크기(GiB) *: 프로젝트 클론의 최대 크기를 GiB 단위로 입력합니다.</block>
+  <block id="60df076fa27b46615c02a69a695d47fa" category="list-text">* 액세스 정책 *: 특정 사용자 또는 그룹에 프로젝트 액세스 권한을 명시적으로 부여합니다.</block>
+  <block id="872c4bee2d347ff2c530983493966657" category="list-text">* 정책 적용 범위 *: 단일 IP 주소 또는 IP 주소 범위를 입력하여 해당 IP 주소 또는 범위로만 프로젝트 액세스를 제한합니다.</block>
+  <block id="6103d4c0df4fa9e11f3ff7d4206cb2c6" category="paragraph">예를 들면 다음과 같습니다.<block ref="b80ff0a24c4ff47488b3e445109bfe19" prefix=" " category="inline-code"></block></block>
+  <block id="fbfbd4c7a8f9575234f1d85a65b369a0" category="list-text">* 사용자 또는 그룹 식별자 *: 사용자 또는 그룹 식별자를 입력하여 프로젝트 액세스를 해당 사용자 또는 그룹만 제한합니다.</block>
+  <block id="601e4c99c321f541ac2b8eb0510576a5" category="paragraph">예를 들면 다음과 같습니다.<block ref="6edf26f6e0badff12fca32b16db38bf2" prefix=" " category="inline-code"></block></block>
+  <block id="48ddfff7668ec69b4b4aba6cb8178ea2" category="paragraph">프로젝트가 만들어지고 프로젝트 페이지의 프로젝트 목록에 나타납니다.</block>
+  <block id="5adc04409266bb451a371fe1fb4271b5" category="section-title">기존 프로젝트 보기</block>
+  <block id="c59f453c07a9cb3b6a8798e686127634" category="paragraph">다음 단계에 따라 구축자를 위해 BlueXP  워크로드 공장에서 생성된 기존 프로젝트를 볼 수 있습니다.</block>
+  <block id="782a66c1109cc7c69c203553b031a2c9" category="list-text">빌더 타일에서 * 프로젝트 페이지로 이동 * 을 선택합니다.</block>
+  <block id="8d316038ebf1829df9f37bc4382f5c99" category="list-text">프로젝트 페이지에 나열된 기존 프로젝트를 봅니다.</block>
+  <block id="83879b61fc6dcf133f90392c69f25d38" category="section-title">프로젝트를 편집합니다</block>
+  <block id="7725fdf63a5f6cb955bcaa6473dd1c51" category="paragraph">언제든지 프로젝트의 설정을 편집할 수 있습니다.</block>
+  <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">옵션 단추</block>
+  <block id="d0db1d4c3851445a0852041a52b296c9" category="list-text">프로젝트 페이지에서 편집할 프로젝트에 대해 을 <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block>선택합니다.</block>
+  <block id="66b51b35cd8204795ab7fee998410a48" category="list-text">필요한 경우 프로젝트 구성을 변경합니다.</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">저장 * 을 선택합니다.</block>
+  <block id="b6dd3178b375027143d1694361b475e4" category="list-text">프로젝트 페이지에서 <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block>스냅숏을 만들 프로젝트에 대해 선택합니다.</block>
+  <block id="0cd11b8225f7c80bcdc81d2f77114559" category="list-text">결과 메뉴에서 * Create a snapshot * 을 선택합니다.</block>
+  <block id="a8ef1104b5eb15d48613229daace44e9" category="list-text">Create snapshot * 대화 상자에서 스냅샷의 이름을 선택하고 * Create * 를 선택합니다.</block>
+  <block id="332e8f9755f014bf425402dbc3cb5c58" category="section-title">프로젝트의 작업 영역을 봅니다</block>
+  <block id="9cfa855917c2aba68c914931f8189bc6" category="paragraph">프로젝트의 클론 또는 스냅샷을 작업 영역이라고 합니다. 작업 영역을 만들면 프로젝트의 작업 정책이 허용하는 한 작업 영역이 유지됩니다. 다음 단계에 따라 프로젝트의 기존 작업 영역을 볼 수 있습니다.</block>
+  <block id="63b8f67914ccd74aae4ec183f8b47a02" category="list-text">프로젝트 페이지에서 프로젝트를 선택하고 * 보기 * 를 선택합니다.</block>
+  <block id="afe6f323353ce261146c3950281e3680" category="list-text">이 프로젝트의 모든 작업 영역의 상태 및 세부 정보를 봅니다.</block>
+  <block id="8ca9805ea33bde88fc83f8cc3dd200f0" category="list-text">작업 영역에 대한 경고 또는 경고가 표시되면 해당 경고 또는 경고 아이콘 위에 마우스를 올려 이유를 확인합니다.</block>
+  <block id="bb92ae025a739a684fde28b70cb90df5" category="section-title">프로젝트를 삭제합니다</block>
+  <block id="7d597c8bc9a2f2e7d749c445b50fe509" category="paragraph">다음 단계에 따라 더 이상 필요하지 않은 프로젝트를 삭제할 수 있습니다.</block>
+  <block id="bafa817ae318f3f9b180bd46a2e63961" category="list-text">프로젝트 페이지에서 삭제할 프로젝트를 선택합니다<block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">삭제 * 를 선택합니다.</block>
+  <block id="8186fba50e8e4d5abb2f25404b3ac987" category="list-text">확인 대화 상자에서 * 삭제 * 를 선택합니다.</block>
+  <block id="6acbdc8ddf8c914f95d450771ab7cede" category="paragraph">프로젝트가 삭제되고 프로젝트와 관련된 코드 또는 아티팩트가 볼륨에서 삭제됩니다. 프로젝트의 스냅샷과 클론이 보존됩니다.</block>
+  <block id="22358702cb945913fe9b03fc1642777a" category="summary">데이터베이스에는 세 가지 다른 모드가 있으며 이 모드는 요구사항이 다릅니다.</block>
+  <block id="6db8b72b7bbe43f04d2b9ad1751e1fe6" category="doc">빌더를 위한 빠른 시작</block>
+  <block id="0a900739ea1484f6a212a7ceda0d619c" category="paragraph">빌더 프로젝트 작성을 시작합니다. 관리자 및 팀 리더는 작성기를 사용하여 개발자 팀의 프로젝트 및 작업 공간을 관리할 수 있습니다.</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1개</block>
+  <block id="2fd605c5fdf1d57ba01b68838e68dc27" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 워크로드 공장 에 로그인합니다</block>
+  <block id="d9eebdefd5feceb309eadc305ce81e6f" category="inline-link">워크로드 팩토리에 계정을 설정합니다</block>
+  <block id="113933a0a6b3eb57d22f707e6384bd49" category="paragraph">를 사용하여<block ref="17b71e2884d56fdbadfe752689dbd4d6" category="inline-link-rx"></block> 로그인해야<block ref="5eb9de2715b74ed434f03d8a9fef9b70" category="inline-link-rx"></block> 합니다.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">2개</block>
+  <block id="b36a952e38561cb86fdb6a473044fce0" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 계정에 AWS 자격 증명 및 권한을 추가합니다</block>
+  <block id="6b2dd6734a7cf2cd8fa1690ca19ccd80" category="paragraph">AWS 계정에 액세스하기 위해 자격 증명을 추가하지 않고 _Basic_mode에서 워크로드 팩터리를 사용할 수 있습니다. 읽기_ 또는 _자동화_ 모드에서 AWS 자격 증명을 워크로드 팩터에 추가하면 워크로드 공장 계정에 FSx for ONTAP 파일 시스템을 생성 및 관리하고 빌더 프로젝트를 배포 및 관리하는 데 필요한 권한이 부여됩니다.</block>
+  <block id="fb391f4cf6483b8b419032dc188bd9d8" category="inline-link">자격 증명 및 사용 권한을 추가하는 방법에 대해 알아봅니다</block>
+  <block id="c01367c7ec78f01defe37cab59b14851" category="paragraph"><block ref="d162e97fcdf643050da77419fb18d12e" category="inline-link-rx"></block>..</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">세 가지</block>
+  <block id="fb43e1b304931d6b7759de94a993863f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 빌더 요구 사항을 충족하도록 환경을 설정합니다</block>
+  <block id="fecfde27c537152de469ba41e82d7a28" category="paragraph">NFS 공유로 구성된 볼륨이 하나 이상 포함된 배포되고 검색된 FSx for ONTAP 파일 시스템이 필요합니다.</block>
+  <block id="4a9fae25b97d697ff8477c0814c42315" category="inline-link-macro">빌더 요구 사항에 대해 자세히 알아보십시오</block>
+  <block id="1a7acd91f937d17469192f4af6d28da4" category="paragraph"><block ref="d5e2584cb83faed7a7062a3e6e2d8a2f" category="inline-link-macro-rx"></block>..</block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">네</block>
+  <block id="ba815000db4db7326e8782f47f58d7be" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 다른 서비스와 통합</block>
+  <block id="79b7decebd7c3aca08634bb967cd7137" category="paragraph">워크로드 팩토리 REST API를 사용하여 서비스 포털 또는 Perforce Helix Core와 같은 다른 서비스와 빌더를 통합합니다.</block>
+  <block id="ec8bba764a3cc41f1e4cf229730c5716" category="inline-link-macro">구축자를 Perforce와 통합하는 방법에 대해 알아보십시오</block>
+  <block id="ef287ab90c9daee09c6045ffbcf3e984" category="paragraph"><block ref="e9e13e6773a86301eeb40b68191f2966" category="inline-link-macro-rx"></block>..</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">다음 단계</block>
+  <block id="88c42892f9e1c911a29a7014b69dfc2f" category="inline-link-macro">프로젝트를 만듭니다</block>
+  <block id="7467d1fcb66c06648d2208ce64162c0d" category="paragraph">이제 코드 및 아티팩트를 개발자 팀에 빠르고 효율적으로 관리할 수 <block ref="48146dbc982d6a3ba456c1f10aacb1a9" category="inline-link-macro-rx"></block>있습니다.</block>
+  <block id="bcb714c2eb89c8ef02579a621f95e48c" category="summary">Builders용 BlueXP  워크로드 공장을 사용하기 전에 워크로드 공장 및 AWS가 올바르게 설정되었는지 확인합니다. 여기에는 AWS 로그인 자격 증명, 구축된 FSx for ONTAP 파일 시스템 등이 포함됩니다.</block>
+  <block id="7860bfc83777aac923d73f1002162f9d" category="doc">구축자 요구 사항</block>
+  <block id="7881e5952d93ca1a1396ec11c08fa645" category="list-text">워크로드 공장 로그인 및 계정</block>
+  <block id="97911b3c54a4e826b34c1f79026316c5" category="list-text">AWS 자격 증명 및 권한</block>
+  <block id="2e9df4fc7da7ba6ad813c1450e8f82ca" category="list-text">자동화 권한으로 워크로드 공장에 AWS 자격 증명을 추가해야 합니다. 즉, Builders용 _AUTOMATE_MODE의 워크로드 공장을 사용합니다.</block>
+  <block id="5145374f219e1c177ab5588a5344aa6e" category="inline-link">워크로드 팩토리에 AWS 자격 증명을 추가하는 방법에 대해 알아보십시오</block>
+  <block id="1b0cdac06552abc95fe86270037368b2" category="paragraph">_Basic_mode 및 _Read_mode 권한은 현재 지원되지 않습니다. <block ref="ced1a4827b1ea3c1da0273c3d73fdd46" category="inline-link-rx"></block></block>
+  <block id="e48bc5875c01dd007b7b2a370e879cde" category="list-text">FSx for ONTAP 파일 시스템</block>
+  <block id="c16810aa96ec44a060863610996db3f6" category="list-text">FSx for ONTAP 파일 시스템이 하나 이상 필요합니다.</block>
+  <block id="cf935c2a5823110e8a09c3289b67514a" category="list-text">파일 시스템은 작성자가 만든 프로젝트와 작업 공간을 저장하는 데 사용됩니다.</block>
+  <block id="c076421513a5b28b674cdd0d818b4476" category="paragraph">이 FSx for ONTAP 파일 시스템은 FlexVol 볼륨을 사용해야 합니다. FlexGroup 볼륨은 지원되지 않습니다.</block>
+  <block id="0d8ba413f648e51fef4fb209cc7b48a1" category="list-text">AWS FSx for ONTAP 파일 시스템이 상주하는 AWS 지역, VPC 및 서브넷을 알아야 합니다.</block>
+  <block id="a0241ec69557b1efd3602bf4d51ce98e" category="list-text">파일 시스템에 다음 구성의 볼륨이 하나 이상 필요합니다.</block>
+  <block id="a138b35d2cf3191dc5044ce9b7c8afc6" category="list-text">볼륨을 NFS 공유로 구성해야 합니다.</block>
+  <block id="d22045fbfcf6f7c1c69b271245369732" category="list-text">파일 시스템은 링크로 구성되어야 합니다.<block ref="69ba18be3e95c1116b4fd108f5c6f03b" category="inline-link-rx"></block>..</block>
+  <block id="1f44141a0f383810dac8c932e0d76754" category="list-text">이 배포의 일부인 AWS 리소스에 적용할 태그 키/값 쌍을 고려해야 합니다(선택 사항).</block>
+  <block id="d5858b81edfda50f75f7994c971764f0" category="inline-link">FSx for ONTAP 파일 시스템을 구축 및 관리하는 방법에 관해 알아보십시오</block>
+  <block id="7d57ea8255b8142e76fbb442ea9a782f" category="paragraph"><block ref="7d57ea8255b8142e76fbb442ea9a782f" category="inline-link-rx"></block></block>
+  <block id="284b0f618c1cefab43ce3a83c106ac42" category="summary">데이터베이스용 워크로드 공장에서 샌드박스 클론 되돌리기</block>
+  <block id="ba981915546be1bb9a1a5f34021cb317" category="doc">데이터베이스용 워크로드 공장에서 샌드박스 클론 되돌리기</block>
+  <block id="119092644393b63350941f731f4e02dd" category="paragraph">생성 시 데이터베이스 클론을 원래 버전으로 되돌립니다.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 대해</block>
+  <block id="36bfe5aa9dbfbad068e6721ddea626bb" category="paragraph">데이터베이스의 클론을 생성할 때 생성 시 클론은 _baseline_clone입니다. 복제된 데이터베이스의 데이터는 생성 시점의 소스 데이터베이스와 동일합니다. 샌드박스 데이터베이스 클론의 데이터가 시간이 지남에 따라 변경되므로 클론이 처음 생성될 때 데이터를 기준으로 다시 되돌릴 수 있습니다. 이 작업을 클론 베이스라인 재설정이라고 합니다. 새 클론을 생성하지 않고 클론의 기준을 다시 설정하면 공간이 절약되지만 샌드박스 클론에 대한 변경 사항은 삭제됩니다.</block>
+  <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">워크로드 팩토리 콘솔</block>
+  <block id="2e600fc81eb21acd31aa44d1697dc84f" category="list-text">에 <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>로그인합니다.</block>
+  <block id="a22aeb541c430c47c35bcc20690ea51a" category="list-text">Databases(데이터베이스) 타일에서 * Go to Databases Inventory(데이터베이스 목록으로 이동) * 를 선택합니다.</block>
+  <block id="a1029809e498e81eaada752a6b08cd7c" category="list-text">데이터베이스에서 * Sandbox * 탭을 선택합니다.</block>
+  <block id="e25b967c54d3008b230ffd4e18be90cb" category="list-text">샌드박스 탭에서 되돌리려는 샌드박스 클론의 세 개의 점 메뉴를 클릭합니다.</block>
+  <block id="0975db7a2f5f2be54dab36d8b76af890" category="list-text">Re-baseline * 을 선택합니다.</block>
+  <block id="ee39d3157a6b84476b1e530c43e7e0af" category="list-text">Re-baseline(기준선 재설정) 대화 상자에서 * Re-baseline(기준선 재설정) * 을 클릭합니다.</block>
+  <block id="60662f13dd467742de00d5852483a73d" category="summary">소스 데이터베이스에서 샌드박스 클론을 분할하여 새 데이터베이스를 생성합니다.</block>
+  <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">소스 데이터베이스에서 샌드박스 클론을 분할합니다</block>
+  <block id="7e63ac86d460cf0995a5ac132e4c8092" category="paragraph">샌드박스 클론을 소스 데이터베이스에서 분할하면 특정 양의 스토리지 용량을 사용하는 새 데이터베이스가 생성됩니다. 분할이 완료되면 클론이 삭제되고 새 데이터베이스가 인벤토리에 나타납니다.</block>
+  <block id="bad5772919d73bf3b17433524b58ead6" category="inline-link-macro">파일 시스템 용량을 늘립니다</block>
+  <block id="eed30e1e95c32e95da513640e3e7e215" category="paragraph">새 데이터베이스에 필요한 스토리지 용량을 고려합니다. <block ref="ecf193ca0846a4137269dac878e92281" category="inline-link-macro-rx"></block>시작하기 전에 FSx for ONTAP 파일 시스템에 대해 알아보겠습니다.</block>
+  <block id="be0c57159940db106da8c592b3a6f1a7" category="list-text">샌드박스 탭에서 분할할 샌드박스 클론의 세 개의 점 메뉴를 클릭합니다.</block>
+  <block id="54e2c4dd2b9e992b761540f131754e81" category="list-text">분할 * 을 선택합니다.</block>
+  <block id="05b751f4cbd4ae2611783e6ab193a961" category="list-text">분할 대화 상자에서 * 분할 * 을 클릭합니다.</block>
+  <block id="056634bec4a153903ebb9b769277f4d7" category="summary">NetApp 기술 지원에 대한 지원 케이스를 생성하기 전에 워크로드 팩토리에 NetApp Support 사이트 계정을 추가한 다음 지원을 등록해야 합니다.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">지원을 위해 등록하십시오</block>
+  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Workload Factory 및 해당 스토리지 솔루션 및 서비스에 대한 기술 지원을 받으려면 지원 등록을 해야 합니다. Workload Factory와는 별도의 웹 기반 콘솔인 BlueXP 콘솔에서 지원을 받으려면 등록해야 합니다.</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">지원을 등록한다고 해서 클라우드 공급자 파일 서비스에 대한 NetApp 지원이 활성화되지 않습니다. 클라우드 공급자 파일 서비스, 인프라 또는 서비스를 사용하는 솔루션과 관련된 기술 지원은 해당 제품에 대한 Workload Factory 설명서의 "도움말 얻기"를 참조하십시오.</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">지원 등록 개요</block>
+  <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">계정 ID 지원 가입 등록(BlueXP의 지원 리소스 페이지에 있는 20자리 960xxxxxxxxx 일련 번호)은 단일 지원 구독 ID로 사용됩니다. 각 BlueXP 계정 수준 지원 구독을 등록해야 합니다.</block>
+  <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">등록하면 지원 티켓 열기 및 자동 사례 생성과 같은 기능을 사용할 수 있습니다. 아래 설명과 같이 BlueXP에 NetApp Support 사이트(NSS) 계정을 추가하여 등록을 완료합니다.</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">NetApp 지원에 계정을 등록합니다</block>
+  <block id="2d6573b6ae4c51dc24e58109473f2490" category="paragraph">지원을 등록하고 지원 권한을 활성화하려면 계정 사용자 한 명이 NetApp Support 사이트 계정을 BlueXP 로그인과 연결해야 합니다. NetApp 지원에 등록하는 방법은 NetApp Support 사이트(NSS) 계정이 이미 있는지 여부에 따라 다릅니다.</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">NSS 계정이 있는 기존 고객</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">NSS 계정을 가지고 있는 NetApp 고객은 BlueXP를 통해 지원을 받기 위해 등록하기만 하면 됩니다.</block>
+  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">BlueXP 콘솔의 오른쪽 상단에서 설정 아이콘을 선택하고 * 자격 증명 * 을 선택합니다.</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">사용자 자격 증명 * 을 선택합니다.</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">NSS 자격 증명 추가 * 를 선택하고 NetApp Support 사이트(NSS) 인증 프롬프트를 따릅니다.</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">등록 프로세스가 성공적으로 완료되었는지 확인하려면 도움말 아이콘을 선택하고 * 지원 * 을 선택합니다.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">리소스 * 페이지에 계정이 지원을 위해 등록되었다는 내용이 표시됩니다.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">계정 일련 번호와 녹색 확인란이 표시된 스크린샷 및 지원을 위해 등록된 텍스트.</block>
+  <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">다른 BlueXP 사용자는 BlueXP 로그인과 NetApp Support 사이트 계정을 연결하지 않은 경우 동일한 지원 등록 상태를 볼 수 없습니다. 그러나 BlueXP 계정이 지원을 위해 등록되지 않은 것은 아닙니다. 계정에 있는 한 사용자가 이 단계를 따랐을 경우 계정이 등록되었습니다.</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">기존 고객이지만 NSS 계정은 없습니다</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">기존 사용권 및 제품 번호가 _NO_NSS인 기존 NetApp 고객인 경우 NSS 계정을 만들어 BlueXP 로그인과 연결해야 합니다.</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp Support 사이트 사용자 등록 양식</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">를 완료하여 NetApp 지원 사이트 계정을 만듭니다<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">적절한 사용자 레벨(일반적으로 * NetApp 고객/최종 사용자 *)을 선택해야 합니다.</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">위에 사용된 BlueXP 계정 일련 번호(960xxxx)를 일련 번호 필드에 복사해야 합니다. 이렇게 하면 계정 처리 속도가 빨라집니다.</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">아래의 단계를 완료하여 새 NSS 계정을 BlueXP 로그인에 연결합니다 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">NetApp이 처음이었습니다</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">NetApp의 새로운 브랜드이고 NSS 계정이 없는 경우 아래의 각 단계를 수행하십시오.</block>
+  <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">지원 리소스 페이지에서 계정 ID 일련 번호를 찾습니다.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">도움말 메뉴의 스크린샷으로, 여기에서 지원은 첫 번째 옵션입니다</block>
+  <block id="55adf589d087b17fca134b34f65498ed" category="paragraph"><block ref="55adf589d087b17fca134b34f65498ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">NetApp의 지원 등록 사이트</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">로<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> 이동하여 * 등록된 NetApp 고객이 아님 * 을 선택합니다.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">필수 필드(빨간색 별표가 있는 필드)를 입력합니다.</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">[제품 라인] * 필드에서 * Cloud Manager * 를 선택한 다음 해당 청구 공급자를 선택합니다.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">위의 2단계에서 계정의 일련 번호를 복사하고 보안 검색을 완료한 다음 NetApp의 글로벌 데이터 개인 정보 보호 정책을 읽는지 확인합니다.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">이 보안 트랜잭션을 완료하기 위해 제공된 사서함으로 즉시 이메일이 전송됩니다. 몇 분 내에 확인 이메일이 도착하지 않으면 스팸 폴더를 확인해야 합니다.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">이메일 내에서 작업을 확인합니다.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">확인 시 NetApp에 요청이 제출되고 NetApp Support 사이트 계정을 만들 것을 권장합니다.</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">일련 번호 필드에 위에서 사용된 계정 일련 번호(960xxxx)를 복사해 주십시오. 이렇게 하면 계정 처리 속도가 빨라집니다.</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">이 과정에서 NetApp이 연락을 드릴 것입니다. 신규 사용자를 위한 일회성 온보딩 연습입니다.</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">NetApp Support 사이트 계정이 있는 경우 아래의 단계를 완료하여 계정을 BlueXP 로그인에 연결합니다 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="b695d69d992cf41ed6cb2eae330d2d9a" category="summary">데이터베이스용 워크로드 팩토리에서의 새로운 기능에 대해 알아보십시오.</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">새로운 기능</block>
+  <block id="b3c5650c2bbe2cf7e9b39aa77519169b" category="paragraph">워크로드 공장의 빌더 기능에 대한 새로운 소식을 알아보십시오.</block>
+  <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">2024년 12월 1일</block>
+  <block id="77ecc188e3683ff647e9350cea980265" category="sidebar">BlueXP  워크로드 팩토리의 FSx for ONTAP 파일 시스템 스토리지를 기반으로 소프트웨어 개발 프로젝트를 생성하고 관리합니다.</block>
+  <block id="4d35766d2a6ab8f1b3cb40a730f9b731" category="sidebar">빌더 설명서를 위한 BlueXP  워크로드 공장</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
+  <block id="360209a9194a7a144c60dc66473ddb6e" category="sidebar">빌더에 대해 자세히 알아보십시오</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">빠른 시작</block>
+  <block id="aafc12cda2bcbe76316f336998489855" category="sidebar">빌더를 사용합니다</block>
+  <block id="f727cac0ddae92d9de3567e9a3b11511" category="sidebar">프로젝트를 관리합니다</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">지식 및 지원</block>
+  <block id="ca98e880382bb99d93f1590464fba67d" category="sidebar">워크로드 생성기</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="sidebar">요구 사항</block>
+  <block id="b3484ff5a2e6115fc61edc79c83f8c4c" category="sidebar">빌더 워크로드 사용</block>
+</blocks>

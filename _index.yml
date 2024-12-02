@@ -1,0 +1,27 @@
+---
+indexpage:
+  title: 빌더 설명서를 위한 BlueXP  워크로드 공장
+  lead: BlueXP  워크로드 팩토리의 FSx for ONTAP 파일 시스템 스토리지를 기반으로 소프트웨어 개발 프로젝트를 생성하고 관리합니다.
+  tiles:
+  - title: 시작하십시오
+    links:
+    - title: 릴리스 정보
+      url: "/whats-new.html"
+    - title: 빌더에 대해 자세히 알아보십시오
+      url: "/learn-builders.html"
+    - title: 빠른 시작
+      url: "/quick-start-builders.html"
+  - title: 빌더를 사용합니다
+    links:
+    - title: 프로젝트를 관리합니다
+      url: "/manage-projects.html"
+    - title: 작업 영역을 만듭니다
+      url: "/create-workspaces.html"
+    - title: Codebox로 자동화
+      url: "/automate-codebox.html"
+  - title: 지식 및 지원
+    links:
+    - title: 지원을 위해 등록하십시오
+      url: "/support-registration.html"
+    - title: 도움을 받으십시오
+      url: "/get-help-builders.html"

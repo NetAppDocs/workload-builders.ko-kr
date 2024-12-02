@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: requirements-builders.html 
+keywords: Builders, FSx, project, projects 
+summary: Builders용 BlueXP  워크로드 공장을 사용하기 전에 워크로드 공장 및 AWS가 올바르게 설정되었는지 확인합니다. 여기에는 AWS 로그인 자격 증명, 구축된 FSx for ONTAP 파일 시스템 등이 포함됩니다. 
+---
+= 구축자 요구 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Builders용 BlueXP  워크로드 공장을 사용하기 전에 워크로드 공장 및 AWS가 올바르게 설정되었는지 확인합니다. 여기에는 AWS 로그인 자격 증명, 구축된 FSx for ONTAP 파일 시스템 등이 포함됩니다.
+
+워크로드 공장 로그인 및 계정:: 를 사용하여 https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["콘솔 환경"^] 로그인해야 https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["워크로드 팩토리에 계정을 설정합니다"^] 합니다.
+AWS 자격 증명 및 권한:: 자동화 권한으로 워크로드 공장에 AWS 자격 증명을 추가해야 합니다. 즉, Builders용 _AUTOMATE_MODE의 워크로드 공장을 사용합니다.
+
+
+_Basic_mode 및 _Read_mode 권한은 현재 지원되지 않습니다. https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["워크로드 팩토리에 AWS 자격 증명을 추가하는 방법에 대해 알아보십시오"^]
+
+FSx for ONTAP 파일 시스템:: FSx for ONTAP 파일 시스템이 하나 이상 필요합니다.
++
+--
+* 파일 시스템은 작성자가 만든 프로젝트와 작업 공간을 저장하는 데 사용됩니다.
++
+이 FSx for ONTAP 파일 시스템은 FlexVol 볼륨을 사용해야 합니다. FlexGroup 볼륨은 지원되지 않습니다.
+
+* AWS FSx for ONTAP 파일 시스템이 상주하는 AWS 지역, VPC 및 서브넷을 알아야 합니다.
+* 파일 시스템에 다음 구성의 볼륨이 하나 이상 필요합니다.
++
+** 볼륨을 NFS 공유로 구성해야 합니다.
+** 파일 시스템은 링크로 구성되어야 합니다. https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["링크에 대해 자세히 알아보세요"^]..
+
+
+* 이 배포의 일부인 AWS 리소스에 적용할 태그 키/값 쌍을 고려해야 합니다(선택 사항).
++
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["FSx for ONTAP 파일 시스템을 구축 및 관리하는 방법에 관해 알아보십시오"^]
+
+
+
+--
+

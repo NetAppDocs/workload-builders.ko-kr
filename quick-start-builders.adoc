@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: quick-start-builders.html 
+keywords: requirements, basic mode, read mode, automate mode 
+summary: 데이터베이스에는 세 가지 다른 모드가 있으며 이 모드는 요구사항이 다릅니다. 
+---
+= 빌더를 위한 빠른 시작
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+빌더 프로젝트 작성을 시작합니다. 관리자 및 팀 리더는 작성기를 사용하여 개발자 팀의 프로젝트 및 작업 공간을 관리할 수 있습니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 워크로드 공장 에 로그인합니다
+[role="quick-margin-para"]
+를 사용하여 https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["콘솔 환경"^] 로그인해야 https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["워크로드 팩토리에 계정을 설정합니다"^] 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 계정에 AWS 자격 증명 및 권한을 추가합니다
+[role="quick-margin-para"]
+AWS 계정에 액세스하기 위해 자격 증명을 추가하지 않고 _Basic_mode에서 워크로드 팩터리를 사용할 수 있습니다. 읽기_ 또는 _자동화_ 모드에서 AWS 자격 증명을 워크로드 팩터에 추가하면 워크로드 공장 계정에 FSx for ONTAP 파일 시스템을 생성 및 관리하고 빌더 프로젝트를 배포 및 관리하는 데 필요한 권한이 부여됩니다.
+
+[role="quick-margin-para"]
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["자격 증명 및 사용 권한을 추가하는 방법에 대해 알아봅니다"^]..
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"] 빌더 요구 사항을 충족하도록 환경을 설정합니다
+[role="quick-margin-para"]
+NFS 공유로 구성된 볼륨이 하나 이상 포함된 배포되고 검색된 FSx for ONTAP 파일 시스템이 필요합니다.
+
+[role="quick-margin-para"]
+link:requirements-builders.html["빌더 요구 사항에 대해 자세히 알아보십시오"^]..
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 다른 서비스와 통합
+[role="quick-margin-para"]
+워크로드 팩토리 REST API를 사용하여 서비스 포털 또는 Perforce Helix Core와 같은 다른 서비스와 빌더를 통합합니다.
+
+[role="quick-margin-para"]
+link:integrate-perforce.html["구축자를 Perforce와 통합하는 방법에 대해 알아보십시오"^]..
+
+.다음 단계
+이제 코드 및 아티팩트를 개발자 팀에 빠르고 효율적으로 관리할 수 link:manage-projects.html["프로젝트를 만듭니다"]있습니다.

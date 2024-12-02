@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: integrate-perforce.html 
+keywords: software builders, integrate, integration, Perforce 
+summary: 구축자를 Perforce와 통합하는 방법에 대해 알아보십시오. 
+---
+= 구축자를 Perforce와 통합합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+개발자가 Perforce CLI를 사용하여 작업 영역을 관리할 수 있도록 빌더를 Perforce Helix Visual Client(P4V)와 통합합니다. 이를 통해 개발자는 프로젝트와 작업 영역 간에 빠르게 전환할 수 있으므로 개발 과정에서 시간을 절약할 수 있습니다.
+
+.단계
+. 를 https://builders.console.workloads.netapp.com/p4v["P4V 통합 파일"^]다운로드하십시오.
+. P4V를 열고 * Tools * > * Manage Tools * > * HTML Tabs * 로 이동합니다.
+. HTML 탭 가져오기 * 를 선택합니다.
+. P4V 통합 XML 파일을 선택하고 * 가져오기 * 를 선택합니다.
+. View * > * Workload Factory * 로 이동합니다.
+
+
+.결과
+빌더 웹 UI에 대한 BlueXP  워크로드 팩터리는 P4V 클라이언트 내에 HTML 탭으로 표시됩니다.
+
+.다음 단계
+link:manage-projects.html["마이그레이션 관리자를 사용하여 Amazon EC2 배포 계획을 생성합니다"]..
