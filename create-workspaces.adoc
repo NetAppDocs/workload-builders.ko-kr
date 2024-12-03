@@ -4,7 +4,7 @@ permalink: create-workspaces.html
 keywords: manage, workspace, snapshot, project 
 summary: 구축자를 위한 BlueXP  워크로드 팩토리에서의 작업 공간은 프로젝트 스냅샷을 기반으로 하는 프로젝트의 Perforce 표현입니다. 작업 영역은 작성기 프로젝트의 일부로 만들 수 있습니다. 
 ---
-= 작업 영역을 만듭니다
+= 작성기 작업 영역을 만듭니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
