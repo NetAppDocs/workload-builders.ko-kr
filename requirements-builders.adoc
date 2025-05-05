@@ -14,10 +14,10 @@ summary: Builders용 BlueXP  워크로드 공장을 사용하기 전에 워크�
 Builders용 BlueXP  워크로드 공장을 사용하기 전에 워크로드 공장 및 AWS가 올바르게 설정되었는지 확인합니다. 여기에는 AWS 로그인 자격 증명, 구축된 FSx for ONTAP 파일 시스템 등이 포함됩니다.
 
 워크로드 공장 로그인 및 계정:: 를 사용하여 https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["콘솔 환경"^] 로그인해야 https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["워크로드 팩토리에 계정을 설정합니다"^] 합니다.
-AWS 자격 증명 및 권한:: 자동화 권한으로 워크로드 공장에 AWS 자격 증명을 추가해야 합니다. 즉, Builders용 _AUTOMATE_MODE의 워크로드 공장을 사용합니다.
+AWS 자격 증명 및 권한:: AWS 자격 증명을 읽기/쓰기 권한으로 워크로드 팩토리얼에 추가해야 합니다. 즉, 구축자를 위해 _Read/Write_mode에서 워크로드 팩토리얼을 사용하게 됩니다.
 
 
-_Basic_mode 및 _Read_mode 권한은 현재 지원되지 않습니다. https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["워크로드 팩토리에 AWS 자격 증명을 추가하는 방법에 대해 알아보십시오"^]
+_Basic_mode 및 _Read-only_mode 권한은 현재 지원되지 않습니다. https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["워크로드 팩토리에 AWS 자격 증명을 추가하는 방법에 대해 알아보십시오"^]
 
 FSx for ONTAP 파일 시스템:: FSx for ONTAP 파일 시스템이 하나 이상 필요합니다.
 +

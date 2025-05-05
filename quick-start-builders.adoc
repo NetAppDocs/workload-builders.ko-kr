@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: quick-start-builders.html 
-keywords: requirements, basic mode, read mode, automate mode 
+keywords: requirements, Basic mode, Read-only mode, Read/Write mode 
 summary: 데이터베이스에는 세 가지 다른 모드가 있으며 이 모드는 요구사항이 다릅니다. 
 ---
 = 빌더를 위한 빠른 시작
@@ -19,7 +19,7 @@ summary: 데이터베이스에는 세 가지 다른 모드가 있으며 이 모�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 계정에 AWS 자격 증명 및 권한을 추가합니다
 [role="quick-margin-para"]
-AWS 계정에 액세스하기 위해 자격 증명을 추가하지 않고 _Basic_mode에서 워크로드 팩터리를 사용할 수 있습니다. 읽기_ 또는 _자동화_ 모드에서 AWS 자격 증명을 워크로드 팩터에 추가하면 워크로드 공장 계정에 FSx for ONTAP 파일 시스템을 생성 및 관리하고 빌더 프로젝트를 배포 및 관리하는 데 필요한 권한이 부여됩니다.
+AWS 계정에 액세스하기 위해 자격 증명을 추가하지 않고 _Basic_mode에서 워크로드 팩터리를 사용할 수 있습니다. 읽기 전용_ 또는 _읽기/쓰기_ 모드에서 AWS 자격 증명을 워크로드 팩토리얼에 추가하면 워크로드 공장 계정에 FSx for ONTAP 파일 시스템을 생성 및 관리하고 빌더 프로젝트를 배포 및 관리하는 데 필요한 권한이 부여됩니다.
 
 [role="quick-margin-para"]
 https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["자격 증명 및 사용 권한을 추가하는 방법에 대해 알아봅니다"^]..
