@@ -93,14 +93,6 @@ NFS 공유로 구성된 볼륨만 선택할 수 있습니다.
 . 저장 * 을 선택합니다.
 
 
-.단계
-. 중 하나를 사용하여 워크로드 팩토리에 link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["콘솔 환경"^]로그인합니다.
-. 빌더 타일에서 * 프로젝트 페이지로 이동 * 을 선택합니다.
-. 프로젝트 페이지에서 image:icon-action.png["옵션 단추"]스냅숏을 만들 프로젝트에 대해 선택합니다.
-. 결과 메뉴에서 * Create a snapshot * 을 선택합니다.
-. Create snapshot * 대화 상자에서 스냅샷의 이름을 선택하고 * Create * 를 선택합니다.
-
-
 
 
 == 프로젝트의 작업 영역을 봅니다

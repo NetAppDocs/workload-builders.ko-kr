@@ -353,4 +353,10 @@
   <block id="98c15024a0a6463353585181f922a6d8" category="list-text">AWS 자격 증명을 읽기/쓰기 권한으로 워크로드 팩토리얼에 추가해야 합니다. 즉, 구축자를 위해 _Read/Write_mode에서 워크로드 팩토리얼을 사용하게 됩니다.</block>
   <block id="19e72e9857cc00ad57d29107d2e5f1fb" category="paragraph">_Basic_mode 및 _Read-only_mode 권한은 현재 지원되지 않습니다. <block ref="ced1a4827b1ea3c1da0273c3d73fdd46" category="inline-link-rx"></block></block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">2025년 5월 4일</block>
+  <block id="d585a12eb322284819964d656e33d798" category="summary">스냅샷과 클론을 생성하여 빌더 프로젝트를 보호합니다.</block>
+  <block id="69b33a7dae155d4aeca7bb5e1abb1cce" category="doc">빌더 프로젝트를 위한 BlueXP  워크로드 팩토리 보호</block>
+  <block id="0deec7e6c3ce920634e346d6726ee3dc" category="paragraph">워크로드 공장에서 직접 주문형 스냅샷을 생성하여 빌더 프로젝트를 보호합니다. 프로젝트의 스냅샷은 생성 시 프로젝트와 연결된 파일 시스템에 저장됩니다.</block>
+  <block id="1c88041df602722b072eab90c31d79ca" category="section-title">프로젝트의 스냅숏을 만듭니다</block>
+  <block id="1370537941b9a464462bf9a14972eee6" category="paragraph">다음 단계에 따라 프로젝트의 스냅숏을 만들 수 있습니다.</block>
+  <block id="a0f77c725888fef07f815b55549ad747" category="sidebar">프로젝트를 보호합니다</block>
 </blocks>
