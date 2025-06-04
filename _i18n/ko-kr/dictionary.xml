@@ -136,7 +136,6 @@
   <block id="c11e3b8e48a7f97cb6cb2951dbceebea" category="section-title">빌더의 프로젝트 및 작업 영역</block>
   <block id="95b4a45851bf07d5318bb2244d28fcc7" category="paragraph">빌더를 사용할 때 프로젝트를 생성하고 소프트웨어 환경과 아티팩트를 나타내는 볼륨을 할당합니다. 새 버전의 소프트웨어를 생성할 때마다 볼륨 데이터를 다시 동기화하고 프로젝트 스냅샷을 생성하여 볼륨 상태를 알려진 버전으로 표시해야 합니다. 프로젝트 소스 볼륨이 롤링 업데이트를 받고 여러 버전을 표시하기 위한 여러 스냅샷이 있을 수 있습니다. 각 스냅샷을 즉시 개발자, QA 또는 빌드 프로세스에 사용할 수 있는 편집 가능한 전용 저장소 또는 공유 리포지토리로 사용할 수 있습니다. 특정 소프트웨어 버전의 컨텍스트에서 클론은 작업 영역입니다.</block>
   <block id="5e403a4c3b152d7f395a9974ccfd4e4c" category="section-title">워크로드 공장 내 운영 모드</block>
-  <block id="63aab450b65202ef9696852b9418f590" category="paragraph">세 가지 운영 모드(_basic_,_read_and_automate_)는 워크로드 공장 내부 및 외부에서 배포할 수 있는 유연한 옵션을 제공합니다. 워크로드 공장 외부에서 사용할 코드 조각으로 _BASIC_MODE에 대해 제로 트러스트 상태에서 즉각적인 가치를 얻을 수 있습니다. _READ_AND_AUTOMATE_MODE에서 증분 신뢰를 사용하여 증분 값을 얻습니다.</block>
   <block id="eb6e457556694fbc8d187534ac1188e1" category="inline-link-macro">워크로드 공장 내 운영 모드</block>
   <block id="7bb004aef4b112c40189995d006d040c" category="paragraph">에 대해 자세히 <block ref="eda3e48a35318d9f8306be63aaa1ab6b" category="inline-link-macro-rx"></block>알아보십시오.</block>
   <block id="f63ee042c60cee6f631e4d8e0414dd00" category="section-title">워크로드 팩토리 코드 박스를 통한 자동화</block>
@@ -348,10 +347,6 @@
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXP 블로그</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="doc">사용 권한 용어가 업데이트되었습니다</block>
-  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">워크로드 팩토리 사용자 인터페이스 및 설명서에서는 이제 "읽기 전용"을 사용하여 읽기 권한을 참조하고 "읽기-쓰기"를 사용하여 사용 권한을 자동화합니다.</block>
-  <block id="5df5d0c3be037db37091a51c0b7dd2a3" category="paragraph">AWS 계정에 액세스하기 위해 자격 증명을 추가하지 않고 _Basic_mode에서 워크로드 팩터리를 사용할 수 있습니다. 읽기 전용_ 또는 _읽기/쓰기_ 모드에서 AWS 자격 증명을 워크로드 팩토리얼에 추가하면 워크로드 공장 계정에 FSx for ONTAP 파일 시스템을 생성 및 관리하고 빌더 프로젝트를 배포 및 관리하는 데 필요한 권한이 부여됩니다.</block>
-  <block id="98c15024a0a6463353585181f922a6d8" category="list-text">AWS 자격 증명을 읽기/쓰기 권한으로 워크로드 팩토리얼에 추가해야 합니다. 즉, 구축자를 위해 _Read/Write_mode에서 워크로드 팩토리얼을 사용하게 됩니다.</block>
-  <block id="19e72e9857cc00ad57d29107d2e5f1fb" category="paragraph">_Basic_mode 및 _Read-only_mode 권한은 현재 지원되지 않습니다. <block ref="ced1a4827b1ea3c1da0273c3d73fdd46" category="inline-link-rx"></block></block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">2025년 5월 4일</block>
   <block id="d585a12eb322284819964d656e33d798" category="summary">스냅샷과 클론을 생성하여 빌더 프로젝트를 보호합니다.</block>
   <block id="69b33a7dae155d4aeca7bb5e1abb1cce" category="doc">빌더 프로젝트를 위한 BlueXP  워크로드 팩토리 보호</block>
@@ -359,4 +354,9 @@
   <block id="1c88041df602722b072eab90c31d79ca" category="section-title">프로젝트의 스냅숏을 만듭니다</block>
   <block id="1370537941b9a464462bf9a14972eee6" category="paragraph">다음 단계에 따라 프로젝트의 스냅숏을 만들 수 있습니다.</block>
   <block id="a0f77c725888fef07f815b55549ad747" category="sidebar">프로젝트를 보호합니다</block>
+  <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">워크로드 팩토리 사용자 인터페이스와 문서에서는 이제 읽기 권한을 나타내는 데 "읽기 전용"을 사용하고 자동화 권한을 나타내는 데 "읽기/쓰기"를 사용합니다.</block>
+  <block id="9d31d07638cfa37e022a93f50a24a37a" category="paragraph">_기본_, _읽기 전용_, _읽기/쓰기_의 세 가지 운영 모드는 워크로드 팩토리 내부 및 외부에 배포할 수 있는 유연한 옵션을 제공합니다. 워크로드 공장 외부에서 사용할 코드 조각으로 _BASIC_MODE에 대해 제로 트러스트 상태에서 즉각적인 가치를 얻을 수 있습니다. _읽기 전용_ 및 _읽기/쓰기_ 모드에서 점진적인 신뢰를 통해 점진적인 가치를 확보하세요.</block>
+  <block id="52170312a0c40a6c39ee9dda5284b4f0" category="paragraph">AWS 계정에 액세스하기 위해 자격 증명을 추가하지 않고 _Basic_mode에서 워크로드 팩터리를 사용할 수 있습니다. 워크로드 팩토리에 AWS 자격 증명을 읽기 전용 또는 읽기/쓰기 모드로 추가하면 워크로드 팩토리 계정에 FSx for ONTAP 파일 시스템을 생성하고 관리하고 Builders 프로젝트를 배포하고 관리하는 데 필요한 권한이 부여됩니다.</block>
+  <block id="07b92eb27d7b3c0fc0f57b352341acb5" category="list-text">워크로드 팩토리에 읽기/쓰기 권한이 있는 AWS 자격 증명을 추가해야 합니다. 즉, 빌더에 대해 워크로드 팩토리를 _읽기/쓰기_ 모드로 사용해야 합니다.</block>
+  <block id="5e80379093f27293f5ebbde3a13ddc71" category="paragraph">현재 _기본_ 모드와 _읽기 전용_ 모드 권한은 지원되지 않습니다. <block ref="ced1a4827b1ea3c1da0273c3d73fdd46" category="inline-link-rx"></block></block>
 </blocks>
