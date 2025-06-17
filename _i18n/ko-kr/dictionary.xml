@@ -348,15 +348,29 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="doc">사용 권한 용어가 업데이트되었습니다</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">2025년 5월 4일</block>
-  <block id="d585a12eb322284819964d656e33d798" category="summary">스냅샷과 클론을 생성하여 빌더 프로젝트를 보호합니다.</block>
-  <block id="69b33a7dae155d4aeca7bb5e1abb1cce" category="doc">빌더 프로젝트를 위한 BlueXP  워크로드 팩토리 보호</block>
-  <block id="0deec7e6c3ce920634e346d6726ee3dc" category="paragraph">워크로드 공장에서 직접 주문형 스냅샷을 생성하여 빌더 프로젝트를 보호합니다. 프로젝트의 스냅샷은 생성 시 프로젝트와 연결된 파일 시스템에 저장됩니다.</block>
   <block id="1c88041df602722b072eab90c31d79ca" category="section-title">프로젝트의 스냅숏을 만듭니다</block>
   <block id="1370537941b9a464462bf9a14972eee6" category="paragraph">다음 단계에 따라 프로젝트의 스냅숏을 만들 수 있습니다.</block>
-  <block id="a0f77c725888fef07f815b55549ad747" category="sidebar">프로젝트를 보호합니다</block>
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">워크로드 팩토리 사용자 인터페이스와 문서에서는 이제 읽기 권한을 나타내는 데 "읽기 전용"을 사용하고 자동화 권한을 나타내는 데 "읽기/쓰기"를 사용합니다.</block>
   <block id="9d31d07638cfa37e022a93f50a24a37a" category="paragraph">_기본_, _읽기 전용_, _읽기/쓰기_의 세 가지 운영 모드는 워크로드 팩토리 내부 및 외부에 배포할 수 있는 유연한 옵션을 제공합니다. 워크로드 공장 외부에서 사용할 코드 조각으로 _BASIC_MODE에 대해 제로 트러스트 상태에서 즉각적인 가치를 얻을 수 있습니다. _읽기 전용_ 및 _읽기/쓰기_ 모드에서 점진적인 신뢰를 통해 점진적인 가치를 확보하세요.</block>
   <block id="52170312a0c40a6c39ee9dda5284b4f0" category="paragraph">AWS 계정에 액세스하기 위해 자격 증명을 추가하지 않고 _Basic_mode에서 워크로드 팩터리를 사용할 수 있습니다. 워크로드 팩토리에 AWS 자격 증명을 읽기 전용 또는 읽기/쓰기 모드로 추가하면 워크로드 팩토리 계정에 FSx for ONTAP 파일 시스템을 생성하고 관리하고 Builders 프로젝트를 배포하고 관리하는 데 필요한 권한이 부여됩니다.</block>
   <block id="07b92eb27d7b3c0fc0f57b352341acb5" category="list-text">워크로드 팩토리에 읽기/쓰기 권한이 있는 AWS 자격 증명을 추가해야 합니다. 즉, 빌더에 대해 워크로드 팩토리를 _읽기/쓰기_ 모드로 사용해야 합니다.</block>
   <block id="5e80379093f27293f5ebbde3a13ddc71" category="paragraph">현재 _기본_ 모드와 _읽기 전용_ 모드 권한은 지원되지 않습니다. <block ref="ced1a4827b1ea3c1da0273c3d73fdd46" category="inline-link-rx"></block></block>
+  <block id="fc031ba945e09cb6053f39527ae4937f" category="doc">클론 지원</block>
+  <block id="e0fa1f53117aa72ea1061c2daaead5bc" category="paragraph">이제 Builders용 BlueXP 워크로드 팩토리에서 프로젝트를 복제할 수 있습니다. 프로젝트를 복제하면 Builders는 스냅샷에서 원본과 동일한 구성으로 새 프로젝트를 생성합니다. 복제는 유사한 프로젝트를 빠르게 생성하거나 테스트 목적으로 사용할 때 유용합니다. Builders의 지침에 따라 새 프로젝트 복제본을 마운트할 수 있습니다.</block>
+  <block id="d88d0821a38808f607bab21c2cc4cf9e" category="inline-link">Builders 프로젝트를 위한 BlueXP 워크로드 팩토리 버전 관리</block>
+  <block id="bbdb933c88b694592079931541c31eb3" category="paragraph"><block ref="bbdb933c88b694592079931541c31eb3" category="inline-link-rx"></block></block>
+  <block id="f3dffc1ab287638d7073208a231fa289" category="summary">스냅샷과 복제본을 사용하여 Builders 프로젝트의 버전을 관리합니다.</block>
+  <block id="b066fd241c4e6e66ece7c7a4527218cf" category="inline-link">워크로드 팩토리 REST API</block>
+  <block id="00b8d5f676925ae3d9b3373616e27074" category="paragraph">Workload Factory에서 직접 온디맨드 스냅샷과 클론을 생성하여 Builders 프로젝트의 다양한 버전을 작업하세요. 프로젝트의 스냅샷과 클론은 프로젝트 생성 시 연결된 파일 시스템에 저장됩니다. 또한 다음을 사용하여 스냅샷과 클론을 관리할 수 있습니다. <block ref="5f3a8bb73f58d34352656d43a7f37086" category="inline-link-rx"></block> .</block>
+  <block id="527db32c9553673d65f35d38b044b7de" category="section-title">프로젝트 복제본 만들기</block>
+  <block id="9a9aa1b9cb93d04e42fe69259c5b4a7e" category="paragraph">다음 단계에 따라 스냅샷에서 Builders 프로젝트를 복제하세요. 복제본을 생성하면 해당 복제본을 포함하는 편집 가능한 새 볼륨이 생성됩니다.</block>
+  <block id="ffd0b63d4491cd8691ad26a9457b8f6a" category="list-text">프로젝트 페이지에서 다음을 선택하세요. <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> 복제하려는 프로젝트에 대해서.</block>
+  <block id="e289b398c25a5d7192096ffdb52be29f" category="list-text">나타나는 메뉴에서 *복제본 만들기*를 선택합니다.</block>
+  <block id="1baa1309157b6d07509f68ee5fbfebaa" category="list-text">*복제본 만들기* 대화 상자에서 다음을 수행합니다.</block>
+  <block id="c9f8a1bc51e7ad4b5dbd3b4fd54d159e" category="list-text">복제본의 이름을 입력하세요.</block>
+  <block id="ef9eed0d84a82b3fb511fd837da2eef7" category="paragraph">복제본의 기본 이름은 현재 날짜와 시간의 접미사가 붙은 프로젝트 이름입니다.</block>
+  <block id="34ec6730fd54f4c463f31402d0ea9b83" category="list-text">복제의 기반으로 사용할 스냅샷을 선택합니다.</block>
+  <block id="c53c752e3fb8fda71f585d5e8721e833" category="paragraph">워크로드 팩토리는 프로젝트의 새로운 복제본을 생성하고, 복제본은 프로젝트 페이지에 새로운 프로젝트로 나타납니다.</block>
+  <block id="f6db487abe903d447c5070f569416c3a" category="section-title">2025년 6월 16일</block>
+  <block id="adbb6bf856639e7a9dcf34b22158718f" category="sidebar">프로젝트 버전 관리</block>
 </blocks>

@@ -36,8 +36,8 @@ sidebar:
     entries:
     - title: 프로젝트를 관리합니다
       url: "/manage-projects.html"
-    - title: 프로젝트를 보호합니다
-      url: "/protect-projects.html"
+    - title: 프로젝트 버전 관리
+      url: "/version-projects.html"
     - title: 작업 영역을 만듭니다
       url: "/create-workspaces.html"
     - title: Codebox로 자동화
